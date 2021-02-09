@@ -10,12 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 @Configuration
-@ComponentScan(basePackages = {"service",
-        "dao"
-})
-
+@ComponentScan(basePackages = {"service", "dao"})
 public class AppConfig {
-
     @Bean
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
