@@ -3,7 +3,6 @@ package dao.impl;
 import dao.UserDao;
 import java.util.List;
 import java.util.Optional;
-
 import model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
