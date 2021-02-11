@@ -13,7 +13,7 @@ import service.UserMapper;
 import service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
     private UserService userService;
     private UserMapper userMapper;
@@ -41,7 +41,7 @@ public class UserController {
     @GetMapping
     public List<UserResponseDto> getAll() {
         return userService.listUsers().stream()
-                .map(e -> userMapper.toDto(e))
+                .map(userMapper::toDto)
                 .collect(Collectors.toList());
     }
 }
